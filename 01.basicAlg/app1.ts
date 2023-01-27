@@ -7,5 +7,4 @@ const myFavoriteHero: string = "Hulk";
 const x: number = 50;
 const h: number = 5;
 const y: number = 10;
-const z: number = h+y;
-console.log(z)
+const z: number = h + y;
