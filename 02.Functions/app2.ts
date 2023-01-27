@@ -15,4 +15,3 @@ const findLongest = (list: string[]): string => {
   }
   return longest;
 };
-console.log(findLongest(avengers))
