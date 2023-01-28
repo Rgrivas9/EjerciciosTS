@@ -10,9 +10,15 @@ const alien: Alien = {
   planet: "Eden",
   weight: "259kg",
 };
-const printAlien=<T extends Alien>(obj: T):void=>{
+/* const printAlien=<T extends Alien>(obj: T):void=>{
     for (let key in obj) {
       console.log(key,'--->', obj[key])
     }
   }
+printAlien(alien) */
+
+const printAlien=(obj:Alien):void=>{
+  let key: keyof typeof obj
+  for (key in obj){console.log(key,'--->',obj[key])}
+}
 printAlien(alien)
