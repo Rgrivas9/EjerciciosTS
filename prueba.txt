@@ -1,0 +1,13 @@
+interface Prueba {
+    id:number;
+    name:string
+}
+const objP:Prueba={
+    id:5,
+    name:'Rafa'
+}
+
+for (const key in (objP:any))=>{
+    console.log(objP[key])
+    
+}
