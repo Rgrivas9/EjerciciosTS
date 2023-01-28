@@ -22,14 +22,12 @@ const counter = (list: string[]): string => {
     newList.push(word.toLowerCase());
   }
   newList.sort();
-  console.log(newList);
   let index: number = 0;
   let acc1: number = 0;
   let str: string = "";
   for (const word of newList) {
     index++;
     acc++;
-
     if (word != newList[index] && newList[index] != undefined) {
       acc != 1
         ? (str += ` ${word} se repite ${acc} veces,`)
