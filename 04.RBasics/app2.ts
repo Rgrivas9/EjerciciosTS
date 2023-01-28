@@ -50,12 +50,16 @@ const users: User[] = [
   },
 ];
 
-
-
-
-/* const getVolume = (list:Sounds[]):number[]=>{
-    const nList:number[]=[];
-    for (const obj of list){for (const key in obj){nList.push(list[key].volume)}}
-    return nList
-}
-console.log(getVolume) */
+const getVolume = (list: User[]): number[] => {
+  const nList: number[] = [];
+  for (const user of list) {
+    let key: keyof typeof user.favoritesSounds;
+    let favUser: Sounds = user.favoritesSounds;
+    for (key in user.favoritesSounds) {
+      let vol: Sound = favUser[key] as Sound;
+      nList.push(vol.volume);
+    }
+  }
+  return nList;
+};
+console.log(getVolume(users));
