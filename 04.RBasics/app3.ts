@@ -66,9 +66,12 @@ const howManyTimes = (list: string[]): string => {
   for (const cat of list) {
     index++;
     acc++;
-    if (cat!==list[index]){str+=`${cat} se repite ${acc} veces, `;acc=0}
+    if (cat !== list[index]) {
+      str += `${cat} se repite ${acc} veces, `;
+      acc = 0;
+    }
   }
 
-  return str.substr(0,str.length-2)
+  return str.substr(0, str.length - 2);
 };
-console.log(howManyTimes(getFavourites(users1)))
+console.log(howManyTimes(getFavourites(users1)));
