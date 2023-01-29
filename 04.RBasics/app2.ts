@@ -62,4 +62,11 @@ const getVolume = (list: User[]): number[] => {
   }
   return nList;
 };
-console.log(getVolume(users));
+const averageVol = (list: number[]): number => {
+  let acc: number = 0;
+  for (const n of list) {
+    acc += n;
+  }
+  return acc / list.length;
+};
+console.log(averageVol(getVolume(users)));
